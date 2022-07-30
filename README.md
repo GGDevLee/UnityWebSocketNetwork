@@ -9,7 +9,7 @@
 
 ### =================关于异步接收消息=================
 #### WebSocketNetwork.onConnect连接状态成功后，会立马开始接收消息
-#### 所以开发者，只需要监听TcpNetwork.onReceive即可接收消息
+#### 所以开发者，只需要监听WebSocketNetwork.onReceive即可接收消息
 #### 一般情况下，网络消息是在多线程下接收的，而多线程的消息，不能直接给Unity使用
 #### 笔者使用了MainThread，使得多线程的消息，安全转移到Unity主线程中
 #### 所以开发者可以安全的使用WebSocketNetwork.onReceive返回的消息，不需要再次转移到Unity主线程中
